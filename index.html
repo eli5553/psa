@@ -12,6 +12,7 @@
     <!-- header bar -->
     <nav>
       <div class="nav-wrapper blue">
+
         <a target="_blank" href="https://yourcompany.corp/innersource-landingpage" class="brand-logo logo">
           <!-- add a logo if needed
           <img src="images/logo.png" width="50" alt="InnerSource logo" data-position="right" data-tooltip="Show more information about InnerSource..." class="tooltipped">
@@ -40,8 +41,8 @@
             <option value="full_name">Organization</option>
             <option value="stargazers_count">Stars</option>
             <option value="watchers_count">Watchers</option>
-            <option value="open_issues_count">Issues</option>
-            <option value="forks_count">Forks</option>
+            <option value="open_issues_count">Views</option>
+            <option value="forks_count">Shares</option>
           </select>
           <label>Sort by:</label>
         </div>
@@ -71,8 +72,8 @@
           <th>Name</th>
           <th class="hidePhone hideTablet">Description</th>
           <th class="hidePhone hideTablet">Stars</th>
-          <th class="hidePhone hideTablet">Issues</th>
-          <th class="hidePhone hideTablet">Forks</th>
+          <th class="hidePhone hideTablet">Views</th>
+          <th class="hidePhone hideTablet">Shares</th>
           <th>Lang</th>
           <th class="hidePhone">Action</th>
         </tr>
@@ -110,13 +111,13 @@
                   <i class="small material-icons">star</i>
                   <span class="icon-subtitle">{{stars}}</span>
                 </div>
-                <div class="tooltipped" data-position="top" data-tooltip="Issues">
+                <div class="tooltipped" data-position="top" data-tooltip="Views">
                   <i class="small material-icons">error</i>
-                  <span class="icon-subtitle">{{issues}}</span>
+                  <span class="icon-subtitle">{{Views}}</span>
                 </div>
-                <div class="tooltipped" data-position="top" data-tooltip="Forks">
+                <div class="tooltipped" data-position="top" data-tooltip="Shares">
                   <i class="small material-icons">share</i>
-                  <span class="icon-subtitle">{{forks}}</span>
+                  <span class="icon-subtitle">{{Shares}}</span>
                 </div>
                 <div>
                   {{{language}}}
@@ -141,13 +142,13 @@
             <i class="small material-icons">star</i>
             <span class="icon-subtitle">{{stars}}</span>
           </div></td>
-          <td class="hidePhone hideTablet"><div class="tooltipped" data-position="top" data-tooltip="Issues">
+          <td class="hidePhone hideTablet"><div class="tooltipped" data-position="top" data-tooltip="Views">
             <i class="small material-icons">error</i>
-            <span class="icon-subtitle">{{issues}}</span>
+            <span class="icon-subtitle">{{Views}}</span>
           </div></td>
-          <td class="hidePhone hideTablet"><div class="tooltipped" data-position="top" data-tooltip="Forks">
+          <td class="hidePhone hideTablet"><div class="tooltipped" data-position="top" data-tooltip="Shares">
             <i class="small material-icons">share</i>
-            <span class="icon-subtitle">{{forks}}</span>
+            <span class="icon-subtitle">{{Shares}}</span>
           </div></td>
           <td>{{{score}}}</td>
           <td>{{{language}}}</td>
@@ -176,13 +177,13 @@
               <i class="small material-icons">star</i>
               <span class="icon-subtitle">{{stars}}</span>
             </div>
-            <div class="tooltipped" data-position="top" data-tooltip="Issues">
+            <div class="tooltipped" data-position="top" data-tooltip="Views">
               <i class="small material-icons">error</i>
-              <span class="icon-subtitle">{{issues}}</span>
+              <span class="icon-subtitle">{{Views}}</span>
             </div>
-            <div class="tooltipped" data-position="top" data-tooltip="Forks">
+            <div class="tooltipped" data-position="top" data-tooltip="Shares">
               <i class="small material-icons">share</i>
-              <span class="icon-subtitle">{{forks}}</span>
+              <span class="icon-subtitle">{{Shares}}</span>
             </div>
             <div>
               {{{score}}}
