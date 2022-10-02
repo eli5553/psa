@@ -42,7 +42,7 @@ function updateContent (sDisplay, sResult, aItems) {
 	window.document.getElementById((sDisplay === "card" ? "card" : "row") + "s").innerHTML = sResult;
 
 	// update result count in search placeholder
-	window.document.getElementById("search").labels[0].innerText = `Search ${aItems.length} projects...`;
+	window.document.getElementById("search").labels[0].innerText = `Search ${aItems.length} employees...`;
 
 	// replace broken images with a	default image
 	registerFallbackImage(window.document);
