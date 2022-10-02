@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>InnerSource Project Portal</title>
+    <link rel="stylesheet" href="lib/materialize.min.css"/>
+    <link rel="stylesheet" href="lib/material-icons.css"/>
+    <link rel="stylesheet" href="styles/global.css"/>
+  </head>
+  <body>
+    <!-- header bar -->
+    <nav>
+      <div class="nav-wrapper blue">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="https://github.com/SAP/project-portal-for-innersource" tooltip="Fork it"><i class="material-icons left">code</i>Contribute</a></li>
+        </ul>
+        <a target="_blank" href="https://yourcompany.corp/innersource-landingpage" class="brand-logo logo">
+          <!-- add a logo if needed
+          <img src="images/logo.png" width="50" alt="InnerSource logo" data-position="right" data-tooltip="Show more information about InnerSource..." class="tooltipped">
+          -->
+        </a>
+        <span class="brand-logo center">COLLABORATE<span id="header-text">collaborate to improve productivity!</span></span>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- filter/sort/search bar -->
+      <div class="row">
+        <div class="input-field col l3 m6 s6">
+          <select id="filter">
+            <option value="All" selected>All</option>
+            <!-- is filled dynamically -->
+            <option value="N/A">Other</option>
+          </select>
+          <label>Filter by collaborator's name:</label>
+        </div>
+
+        <div class="input-field col l3 m6 s6">
+          <select id="sort">
+            <option value="score" selected>Activity</option>
+            <option value="name">Name</option>
+            <option value="full_name">Organization</option>
+            <option value="stargazers_count">Stars</option>
+            <option value="watchers_count">Watchers</option>
+            <option value="open_issues_count">Issues</option>
+            <option value="forks_count">Forks</option>
+          </select>
+          <label>Sort by:</label>
+        </div>
+        <div class="input-field col l4 m10 s8">
+          <input id="search" type="text" class="validate">
+          <label for="search">Search</label>
+        </div>
+        <div class="switch icons col l2 m2 s4">
+          <label>
+            <br/>
+            <i class="small material-icons">view_list</i>
+            <input id="display" type="checkbox" checked value="card">
+            <span class="lever"></span>
+            <i class="small material-icons active">view_modules</i>
+          </label>
+        </div>
+      </div>
+
+      <!-- card content (default), is filled dynamically -->
+      <div id="cards" class="row"></div>
+
+      <!-- list content (alternative) -->
+      <table id="list" class="list highlight" style="display: none !important;">
+        <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Name</th>
+          <th class="hidePhone hideTablet">Description</th>
+          <th class="hidePhone hideTablet">Stars</th>
+          <th class="hidePhone hideTablet">Issues</th>
+          <th class="hidePhone hideTablet">Forks</th>
+          <th>Score</th>
+          <th>Lang</th>
+          <th class="hidePhone">Action</th>
+        </tr>
+        </thead>
+        <!-- is filled dynamically -->
+        <tbody id="rows"></tbody>
+      </table>
+
+      <!-- add button-->
+      <div data-position="left" data-tooltip="Add a new InnerSource project to the Project Portal..." class="tooltipped fixed-action-btn">
+        <a target="_blank" href="https://yourcompany.corp/innersource-instructions" class="btn-floating btn-large orange">
+          <i class="large material-icons">add</i>
+        </a>
+      </div>
+    </div>
+
+    <!-- modal placeholder -->
+    <div id="modal-details" class="modal"></div>
+
+    <!-- handlebars templates (filled in script) -->
+    <script id="card-template" type="text/x-handlebars-template">
+      <div>
+        <div class="col l4 s12 m6">
+          <div class="card hoverable" onclick="showModal({{id}}, event)">
+            <div class="card-content">
+              <span class="card-media">
+                <img src="{{mediaURL}}"/>
+              </span>
+              <div class="card-title">{{title}}
+                <p class="repoLink"><a href="{{repoURL}}" target="_blank">{{repoTitle}}</a></p>
+              </div>
+              <div class="card-description">{{description}}</div>
+              <div class="icon-container">
+                <div class="tooltipped" data-position="top" data-tooltip="Stars">
+                  <i class="small material-icons">star</i>
+                  <span class="icon-subtitle">{{stars}}</span>
+                </div>
+                <div class="tooltipped" data-position="top" data-tooltip="Issues">
+                  <i class="small material-icons">error</i>
+                  <span class="icon-subtitle">{{issues}}</span>
+                </div>
+                <div class="tooltipped" data-position="top" data-tooltip="Forks">
+                  <i class="small material-icons">share</i>
+                  <span class="icon-subtitle">{{forks}}</span>
+                </div>
+                <div>
+                  {{{score}}}
+                </div>
+                <div>
+                  {{{language}}}
+                </div>
+              </div>
+            </div>
+            <div class="blue card-action darken-1">
+              <a class="white-text" href="index.html" target="_blank">BACK</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
