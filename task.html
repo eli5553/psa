@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>InnerSource Project Portal</title>
+    <link rel="stylesheet" href="lib/materialize.min.css"/>
+    <link rel="stylesheet" href="styles/global.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper blue">
+        <a target="_blank" href="https://yourcompany.corp/innersource-landingpage" class="brand-logo logo">
+        </a>
+        <span class="brand-logo center">Task Board<span id="header-text">Total Task: 12 -- In Progress Task: 2 -- Completed Task: 2</span></span>
+    </div>
+    </nav>
+
+    <br>
+    <div class="first">
+        <div class="container center">
+            <div class="card-title blue-text lighten-2 center-align panel-heading">Team Members</div>
+            <img class="circle" src="https://avatars2.githubusercontent.com/u/216296">
+            <img class="circle" src="https://avatars2.githubusercontent.com/u/4172079">
+            <img class="circle" src="https://avatars2.githubusercontent.com/u/111951">
+            <img class="circle" src="https://avatars2.githubusercontent.com/u/35996">
+            <img class="circle" src="https://avatars2.githubusercontent.com/u/500">
+            <img class="circle" src="https://avatars2.githubusercontent.com/u/50">
+            <img class="circle" src="https://avatars2.githubusercontent.com/u/100">
+            <img class="circle" src="https://avatars2.githubusercontent.com/u/75">
+            <img class="circle" src="https://avatars2.githubusercontent.com/u/80">
+        </div>
+    </div>
+    <br><br>
+    <div class="second">
+        <div class="container center">
+            <div class="card-title blue-text lighten-2 center-align panel-heading">Add New Task</div>
+            <div class="row">
+                <div class="col m5 s5" style="word-wrap: break-word; overflow-wrap: break-word;">
+                    <p>Title</p>
+                    <input type="text" style="border: 1px solid #555;">
+                </div>
+
+                <div class="col m5 s5">
+                    <p>People</p>
+                    <div class="input-field" style="border: 1px solid #555;">
+                        <select style="display:inline ">
+                          <option value="1" selected>Cayden James</option>
+                          <option value="2">Adrian Chase</option>
+                          <option value="3">Oliver Queen</option>
+                        </select>
+                        
+                    </div>
+                    
+
+                </div>
+
+                <div class="col m5 s5" style="word-wrap: break-word; overflow-wrap: break-word;">
+                    <p>Skills Needed</p>
+                    <input type="text" style="border: 1px solid #555;">
+                </div>
+
+                <div class="col m5 s5" style="word-wrap: break-word; overflow-wrap: break-word;">
+                    <p>Start Date</p>
+                    <input type="date">
+                </div>
+                
+                <div class="col m5 s5" style="word-wrap: break-word; overflow-wrap: break-word;">
+                    <p>End Date</p>
+                    <input type="date">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="special">
+        <div class="container">
+            <div class="row">
+                <div class="col m6 s4" style="word-wrap: break-word; overflow-wrap: break-word;">
+                    <div class="card-title yellow accent-3 center-align panel-heading">To Do</div>
+                    <ul class="list-group center">
+                        <li class="list-group-item"><img class="circle" src="https://avatars2.githubusercontent.com/u/216296">&nbsp;Create Module<br><p style="color:#ff6358; display:inline;">Remaining 6 days</p></li>
+                        <li class="list-group-item"><img class="circle" src="https://avatars0.githubusercontent.com/u/4172079">&nbsp;Testing Software<br><p style="color:#ff6358; display:inline;">Remaining 7 days</p></li>
+                        <li class="list-group-item"><img class="circle" src="https://avatars2.githubusercontent.com/u/111951">&nbsp;Server Deploy<br><p style="color:#ff6358; display:inline;">Remaining 10 days</p></li>
+                        <li class="list-group-item"><img class="circle" src="https://avatars2.githubusercontent.com/u/35996">&nbsp;Transport Container<br><p style="color:#ff6358; display:inline;">Remaining 15 days</p></li>
+                        <li class="list-group-item"><img class="circle" src="https://avatars2.githubusercontent.com/u/500">&nbsp;Load Ship<br><p style="color:#ff6358; display:inline;">Remaining 18 days</p></li>
+                    </ul>
+                </div>
+                
+
+                <div class="col m6 s4">
+                    <div class="card-title green accent-2 center-align">In Progress</div>
+                    <ul class="list-group center">
+                        <li class="list-group-item"><img class="circle" src="https://avatars2.githubusercontent.com/u/50">&nbsp;Contribution Report<br><p style="color:#ff6358; display:inline;">Remaining 2 days</p></li>
+                        <li class="list-group-item"><img class="circle" src="https://avatars0.githubusercontent.com/u/100">&nbsp;Data Management<br><p style="color:#ff6358; display:inline;">Remaining 3 days</p></li>
+                    </ul>
+                </div>
+
+                <div class="col m6 s4">
+                    <div class="card-title orange lighten-3 center-align">Completed</div>
+                    <ul class="list-group center">
+                        <li class="list-group-item"><img class="circle" src="https://avatars2.githubusercontent.com/u/75">&nbsp;Traffic Tracking</li>
+                        <li class="list-group-item"><img class="circle" src="https://avatars0.githubusercontent.com/u/80">&nbsp;Social Media updates</li>
+                    </ul>
+                </div>
+
+                <div class="col m6 s4">
+                    <div class="card-title blue lighten-4 center-align">Chart</div>
+                    <img src="images/chart.png" style="width:100%">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
